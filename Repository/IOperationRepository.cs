@@ -2,7 +2,7 @@
 
 namespace Repository
 {
-    internal interface IOperationRepository
+    public interface IOperationRepository
     {
         Operation CreateOperation(Operation operation);
 
@@ -12,7 +12,7 @@ namespace Repository
 
         void UpdateOperation(Operation operation);
 
-        void DeleteOperation(Operation operation);
+        void DeleteOperation(int operationId);
 
     }
 }

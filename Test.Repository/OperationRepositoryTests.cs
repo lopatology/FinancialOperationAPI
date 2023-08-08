@@ -218,29 +218,6 @@ namespace Test.Repository
 
 
         [Fact]
-        public void DeleteOperation_ShouldThrowArgumentNullExceptionIfOperationIsNull()
-        {
-            // Arrange
-            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseInMemoryDatabase(databaseName: "OperationsDatabase10");
-            var _dbContext = new ApplicationDbContext(optionsBuilder.Options);
-            IEnumerable<Operation> operations = new List<Operation>()
-            {
-                new Operation(4, "Wydatek1", 10.0f),
-                new Operation(5, "Wydatek2", 10.0f)
-            };
-            _dbContext.Operations.AddRange(operations);
-            _dbContext.SaveChanges();
-
-            OperationRepository repository = new OperationRepository(_dbContext);
-            Operation operationToDelete = null;
-
-            // Act, Assert
-            Should.Throw<ArgumentNullException>(() => repository.DeleteOperation(operationToDelete));
-        }
-
-
-        [Fact]
         public void DeleteOperation_ShouldThrowKeyNotFoundExceptionIfOperationIsNull()
         {
             // Arrange
@@ -259,7 +236,7 @@ namespace Test.Repository
             Operation operationToDelete = new Operation(10, "Wydatek10", 10.0f);
 
             // Act, Assert
-            Should.Throw<KeyNotFoundException>(() => repository.DeleteOperation(operationToDelete));
+            Should.Throw<KeyNotFoundException>(() => repository.DeleteOperation(operationToDelete.Id));
         }
 
 
@@ -284,7 +261,7 @@ namespace Test.Repository
             OperationRepository repository = new OperationRepository(_dbContext);
 
             // Act
-            repository.DeleteOperation(operationToDelete);
+            repository.DeleteOperation(operationToDelete.Id);
 
             // Assert
             _dbContext.Operations.ToList().FirstOrDefault(x => x.Id == operationToDelete.Id).ShouldBeNull();
