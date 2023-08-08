@@ -8,6 +8,10 @@
         public bool IsIncome { get; set; }
 
 
+        public Operation()
+        {
+        }
+
         public Operation(int id, string name, float amount, bool isIncome = false)
         {
             Id = id;

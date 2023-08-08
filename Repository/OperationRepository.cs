@@ -64,16 +64,12 @@ namespace Repository
             _applicationDbContext.SaveChanges();
         }
 
-        public void DeleteOperation(Operation operation)
+        public void DeleteOperation(int operationId)
         {
-            if (operation == null)
-            {
-                throw new ArgumentNullException();
-            }
-            var foundOperationToDelete = _operationsEntity.FirstOrDefault(x => x.Id == operation.Id);
+            var foundOperationToDelete = _operationsEntity.FirstOrDefault(x => x.Id == operationId);
             if (foundOperationToDelete == null)
             {
-                throw new KeyNotFoundException(operation.Id.ToString());
+                throw new KeyNotFoundException(operationId.ToString());
             }
             _operationsEntity.Remove(foundOperationToDelete);
             _applicationDbContext.SaveChanges();
