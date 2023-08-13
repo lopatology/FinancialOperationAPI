@@ -27,7 +27,13 @@ namespace Service
         {
             try
             {
-                return _repository.ReadOperationById(id);
+                Operation result = _repository.ReadOperationById(id);
+                
+                if (result == null)
+                {
+                    return null;
+                }
+                return result;
             }
             catch (KeyNotFoundException)
             {
