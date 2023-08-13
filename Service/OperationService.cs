@@ -37,7 +37,14 @@ namespace Service
 
         public IEnumerable<Operation> Get()
         {
-            return _repository.ReadAllOperations();
+            try
+            {
+                return _repository.ReadAllOperations();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Put(Operation operation)

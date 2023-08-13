@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{13E9E20A-5F24-4707-8180-B041B48F72CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{13E9E20A-5F24-4707-8180-B041B48F72CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{62078EF5-6671-488D-B482-A668DEEB620E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{62078EF5-6671-488D-B482-A668DEEB620E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CD820E86-8DE7-4B94-8FCB-EAB5C34822C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Repository", "Test.Repository\Test.Repository.csproj", "{743C4FBC-B3DD-45D6-B9FB-79C0D3D1CE7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Repository", "Test.Repository\Test.Repository.csproj", "{743C4FBC-B3DD-45D6-B9FB-79C0D3D1CE7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{51520A01-9FD7-4A3A-83FD-1C3C010002F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{51520A01-9FD7-4A3A-83FD-1C3C010002F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Service", "Test.Service\Test.Service.csproj", "{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Service", "Test.Service\Test.Service.csproj", "{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{1AF6B7D0-DDC0-4BC2-B87C-468DFAB042EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.WebApi", "Test.WebApi\Test.WebApi.csproj", "{BD58721D-C5E2-401A-B7CF-5ACBF2551315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,14 @@ Global
 		{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF6B7D0-DDC0-4BC2-B87C-468DFAB042EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF6B7D0-DDC0-4BC2-B87C-468DFAB042EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF6B7D0-DDC0-4BC2-B87C-468DFAB042EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF6B7D0-DDC0-4BC2-B87C-468DFAB042EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD58721D-C5E2-401A-B7CF-5ACBF2551315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD58721D-C5E2-401A-B7CF-5ACBF2551315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD58721D-C5E2-401A-B7CF-5ACBF2551315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD58721D-C5E2-401A-B7CF-5ACBF2551315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{743C4FBC-B3DD-45D6-B9FB-79C0D3D1CE7E} = {CD820E86-8DE7-4B94-8FCB-EAB5C34822C2}
 		{33F58F21-7EB8-4FEA-A58E-5F9B0A873B23} = {CD820E86-8DE7-4B94-8FCB-EAB5C34822C2}
+		{BD58721D-C5E2-401A-B7CF-5ACBF2551315} = {CD820E86-8DE7-4B94-8FCB-EAB5C34822C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B108533-38F9-4986-B817-F470FC55F8B4}
