@@ -27,13 +27,7 @@ namespace Service
         {
             try
             {
-                Operation result = _repository.ReadOperationById(id);
-                
-                if (result == null)
-                {
-                    return null;
-                }
-                return result;
+                return _repository.ReadOperationById(id);
             }
             catch (KeyNotFoundException)
             {
@@ -43,7 +37,14 @@ namespace Service
 
         public IEnumerable<Operation> Get()
         {
-            return _repository.ReadAllOperations();
+            try
+            {
+                return _repository.ReadAllOperations();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Put(Operation operation)
